@@ -12,49 +12,59 @@
             background-color: #f4f4f4;
         }
         section {
-            position: relative; /* Para posicionar los elementos dentro de la sección */
-            min-height: 100vh; /* Altura mínima de la ventana */
-            overflow: hidden; /* Para evitar el desbordamiento */
-            padding-bottom: 50px; /* Espacio adicional en la parte inferior */
-            background-color: rgba(139, 69, 19, 0.7); /* Fondo marrón con opacidad */
-            backdrop-filter: blur(5px); /* Efecto borroso */
+            position: relative;
+            min-height: 100vh;
+            overflow: hidden;
+            padding-bottom: 50px;
+            background-color: rgba(139, 69, 19, 0.7);
+            backdrop-filter: blur(5px);
+            display: flex; /* Flexbox para centrar contenido */
+            flex-direction: column; /* Para apilar elementos verticalmente */
+            justify-content: center; /* Centra verticalmente */
+            align-items: center; /* Centra horizontalmente */
         }
         img {
-            display: block; /* Hace que la imagen sea un bloque */
-            margin: 0 auto; /* Centra la imagen */
-            max-width: 90%; /* Ancho máximo de la imagen */
-            height: auto; /* Mantiene la proporción de la imagen */
-            border-radius: 10px; /* Bordes redondeados para un mejor efecto visual */
+            display: block;
+            margin: 0 auto;
+            max-width: 90%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra para la imagen */
         }
         h2 {
             position: absolute;
             top: 20px;
             left: 20px;
-            color: white; /* Color del texto */
-            background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
             padding: 10px;
             border-radius: 5px;
-            font-size: 24px; /* Tamaño del texto */
+            font-size: 24px;
         }
         .nav-button {
-            position: absolute;
-            top: 80%; /* Espaciado desde la parte superior de la sección */
-            padding: 10px 20px; /* Espaciado del botón */
-            background-color: #d2b48c; /* Color marrón claro */
-            color: white; /* Color del texto */
-            border: none; /* Sin borde */
-            border-radius: 5px; /* Bordes redondeados */
-            cursor: pointer; /* Cambia el cursor a puntero */
-            font-size: 16px; /* Tamaño del texto */
+            width: 100%; /* Botón ocupa todo el ancho */
+            padding: 15px; /* Aumenta el padding */
+            background-color: #d2b48c;
+            color: white;
+            border: none;
+            border-radius: 0; /* Bordes rectos para abarcar el ancho */
+            cursor: pointer;
+            font-size: 16px;
+            position: absolute; /* Para posicionar al fondo */
+            bottom: 10px; /* Espaciado desde el fondo */
         }
         .nav-button:hover {
-            background-color: #c2a58d; /* Color de fondo al pasar el mouse */
+            background-color: #c2a58d;
         }
         .next-button {
-            right: 20px; /* Espaciado desde la derecha */
+            right: 0; /* A la derecha */
         }
         .back-button {
-            left: 20px; /* Espaciado desde la izquierda */
+            left: 0; /* A la izquierda */
+        }
+        .disabled {
+            background-color: #a9a9a9; /* Color gris para el botón deshabilitado */
+            cursor: not-allowed; /* Cambia el cursor a prohibido */
         }
     </style>
 </head>
@@ -63,7 +73,7 @@
     <section id="seccion1">
         <h2>Sección 1</h2>
         <img src="imagenes/imagen1.png" alt="Descripción de la imagen 1">
-        <button class="nav-button back-button" onclick="location.href='#seccion15'">Atrás</button>
+        <button class="nav-button back-button disabled" disabled>Atrás</button>
         <button class="nav-button next-button" onclick="location.href='#seccion2'">Siguiente</button>
     </section>
 
@@ -162,7 +172,7 @@
         <h2>Sección 15</h2>
         <img src="imagenes/imagen15.png" alt="Descripción de la imagen 15">
         <button class="nav-button back-button" onclick="location.href='#seccion14'">Atrás</button>
-        <button class="nav-button next-button" onclick="location.href='#seccion1'">Siguiente</button>
+        <button class="nav-button next-button disabled" disabled>Siguiente</button>
     </section>
 
 </body>
