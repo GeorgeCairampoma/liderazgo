@@ -12,19 +12,19 @@
             background-color: #f4f4f4;
         }
         section {
-            display: flex; /* Usar flexbox para centrar el contenido */
-            justify-content: center; /* Centrar horizontalmente */
-            align-items: center; /* Centrar verticalmente */
-            height: 100vh; /* Altura completa de la ventana */
-            margin: 0;
-            padding: 0;
-            position: relative;
-            overflow: hidden;
+            position: relative; /* Para posicionar los elementos dentro de la sección */
+            min-height: 100vh; /* Altura mínima de la ventana */
+            overflow: hidden; /* Para evitar el desbordamiento */
+            padding-bottom: 50px; /* Espacio adicional en la parte inferior */
+            background-color: rgba(139, 69, 19, 0.7); /* Fondo marrón con opacidad */
+            backdrop-filter: blur(5px); /* Efecto borroso */
         }
         img {
-            width: 100%; /* Imagen ocupa el 100% del ancho */
+            display: block; /* Hace que la imagen sea un bloque */
+            margin: 0 auto; /* Centra la imagen */
+            max-width: 90%; /* Ancho máximo de la imagen */
             height: auto; /* Mantiene la proporción de la imagen */
-            display: block; /* Elimina el espacio debajo de la imagen */
+            border-radius: 10px; /* Bordes redondeados para un mejor efecto visual */
         }
         h2 {
             position: absolute;
@@ -34,6 +34,22 @@
             background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
             padding: 10px;
             border-radius: 5px;
+            font-size: 24px; /* Tamaño del texto */
+        }
+        .nav-button {
+            position: absolute;
+            bottom: 20px; /* Espaciado desde la parte inferior */
+            right: 20px; /* Espaciado desde la derecha */
+            padding: 10px 20px; /* Espaciado del botón */
+            background-color: #007bff; /* Color de fondo */
+            color: white; /* Color del texto */
+            border: none; /* Sin borde */
+            border-radius: 5px; /* Bordes redondeados */
+            cursor: pointer; /* Cambia el cursor a puntero */
+            font-size: 16px; /* Tamaño del texto */
+        }
+        .nav-button:hover {
+            background-color: #0056b3; /* Color de fondo al pasar el mouse */
         }
     </style>
 </head>
@@ -42,77 +58,93 @@
     <section id="seccion1">
         <h2>Sección 1</h2>
         <img src="imagenes/imagen1.png" alt="Descripción de la imagen 1">
+        <button class="nav-button" onclick="location.href='#seccion2'">Siguiente</button>
     </section>
 
     <section id="seccion2">
         <h2>Sección 2</h2>
         <img src="imagenes/imagen2.png" alt="Descripción de la imagen 2">
+        <button class="nav-button" onclick="location.href='#seccion3'">Siguiente</button>
     </section>
 
     <section id="seccion3">
         <h2>Sección 3</h2>
         <img src="imagenes/imagen3.png" alt="Descripción de la imagen 3">
+        <button class="nav-button" onclick="location.href='#seccion4'">Siguiente</button>
     </section>
 
     <section id="seccion4">
         <h2>Sección 4</h2>
         <img src="imagenes/imagen4.png" alt="Descripción de la imagen 4">
+        <button class="nav-button" onclick="location.href='#seccion5'">Siguiente</button>
     </section>
 
     <section id="seccion5">
         <h2>Sección 5</h2>
         <img src="imagenes/imagen5.png" alt="Descripción de la imagen 5">
+        <button class="nav-button" onclick="location.href='#seccion6'">Siguiente</button>
     </section>
 
     <section id="seccion6">
         <h2>Sección 6</h2>
         <img src="imagenes/imagen6.png" alt="Descripción de la imagen 6">
+        <button class="nav-button" onclick="location.href='#seccion7'">Siguiente</button>
     </section>
 
     <section id="seccion7">
         <h2>Sección 7</h2>
         <img src="imagenes/imagen7.png" alt="Descripción de la imagen 7">
+        <button class="nav-button" onclick="location.href='#seccion8'">Siguiente</button>
     </section>
 
     <section id="seccion8">
         <h2>Sección 8</h2>
         <img src="imagenes/imagen8.png" alt="Descripción de la imagen 8">
+        <button class="nav-button" onclick="location.href='#seccion9'">Siguiente</button>
     </section>
 
     <section id="seccion9">
         <h2>Sección 9</h2>
         <img src="imagenes/imagen9.png" alt="Descripción de la imagen 9">
+        <button class="nav-button" onclick="location.href='#seccion10'">Siguiente</button>
     </section>
 
     <section id="seccion10">
         <h2>Sección 10</h2>
         <img src="imagenes/imagen10.png" alt="Descripción de la imagen 10">
+        <button class="nav-button" onclick="location.href='#seccion11'">Siguiente</button>
     </section>
 
     <section id="seccion11">
         <h2>Sección 11</h2>
         <img src="imagenes/imagen11.png" alt="Descripción de la imagen 11">
+        <button class="nav-button" onclick="location.href='#seccion12'">Siguiente</button>
     </section>
 
     <section id="seccion12">
         <h2>Sección 12</h2>
         <img src="imagenes/imagen12.png" alt="Descripción de la imagen 12">
+        <button class="nav-button" onclick="location.href='#seccion13'">Siguiente</button>
     </section>
 
     <section id="seccion13">
         <h2>Sección 13</h2>
         <img src="imagenes/imagen13.png" alt="Descripción de la imagen 13">
+        <button class="nav-button" onclick="location.href='#seccion14'">Siguiente</button>
     </section>
 
     <section id="seccion14">
         <h2>Sección 14</h2>
         <img src="imagenes/imagen14.png" alt="Descripción de la imagen 14">
+        <button class="nav-button" onclick="location.href='#seccion15'">Siguiente</button>
     </section>
 
     <section id="seccion15">
         <h2>Sección 15</h2>
         <img src="imagenes/imagen15.png" alt="Descripción de la imagen 15">
+        <button class="nav-button" onclick="location.href='#seccion1'">Volver al Inicio</button>
     </section>
 
 </body>
 </html>
+
